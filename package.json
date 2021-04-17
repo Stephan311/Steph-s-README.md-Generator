@@ -1,22 +1,14 @@
 {
-  "name": "steph-s-readme.md-generator",
+  "name": "static-site",
   "version": "1.0.0",
-  "description": "Stephan's README.md Generator",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Stephan311/Steph-s-README.md-Generator.git"
-  },
-  "author": "Stephan du Plooy",
+  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Stephan311/Steph-s-README.md-Generator/issues"
-  },
-  "homepage": "https://github.com/Stephan311/Steph-s-README.md-Generator#readme",
   "dependencies": {
-    "inquirer": "^8.0.0"
+    "inquirer": "^6.3.1"
   }
 }

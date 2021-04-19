@@ -18,11 +18,6 @@ const questions = () => {
         message: 'Give a brief description of your project'
     },
     {
-        type: 'Checkbox',
-        message: 'What will be in your table of contents?',
-        choices: ['Installation', 'Usage', 'Lisence', 'Questions']
-    },
-    {
         type: 'input',
         name: 'Installation',
         message: 'What are the installation steps?'
@@ -47,12 +42,33 @@ const questions = () => {
 ]);
 };
 
-
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(answers) {
+
+    `#${answers.name}
+    
+#Description
+${answers.description}
+#Table of Contents
+* Installation
+* Usage
+* Lisence
+* Questions
+## Installation
+${answers.Installation}
+## Usage
+${answers.usage}
+$#Lisence
+${answers.Lisence}
+$#Questions
+${answers.questions}`
+}
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    questions()
+    .then(answers)
+}
 
 // Function call to initialize app
 init();

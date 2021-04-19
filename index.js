@@ -65,10 +65,12 @@ ${answers.questions}`
 }
 
 // TODO: Create a function to initialize app
-function init() {
+const init = () => {
     questions()
-    .then(answers)
-}
+    .then((answers) => writeFileAsync('READMENEW.md', generateREADME(answers)))
+    .then(()=> console.log('Your README has been created!'))
+    .catch((err) => console.error(err)); 
+};
 
 // Function call to initialize app
 init();

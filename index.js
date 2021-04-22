@@ -2,6 +2,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const util = require('util');
+const generateMarkdown = require('./utils/generateMarkdown.js');
 
 // TODO: Create an array of questions for user input
 const questions = () => {
@@ -45,7 +46,7 @@ const questions = () => {
 ])
 .then((answers) => {
     const filename =  `${answers.name.toLowerCase().split(' ').join('')}.md`;
-    fs.writeFile(filename, JSON.stringify(writeToFile(answers), null, '/t'), (err) =>
+    fs.writeFile(filename, JSON.stringify(generateMarkdown(answers), null, '/t'), (err) =>
     err? console.log(err) : console.log("README has been created! Check it out!"))
 
 })
@@ -53,46 +54,57 @@ const questions = () => {
 
 questions()
 
-// TODO: Create a function to write README file
-function writeToFile(answer) {
+// // TODO: Create a function to write README file
+// function writeToFile(answer) {
 
-   return `# ${answer.name}
+//    return `# ${answer.name}
 
-*[Installation](#installation)
+// *[Installation](#installation)
 
-*[Usage](#usage)
+// *[Usage](#usage)
 
-*[contribution](#contribution)
+// *[contribution](#contribution)
 
-*[Credits](#credits)
+// *[Credits](#credits)
 
-*[Lisence](#lisence)   
+// *[Lisence](#lisence)   
 
-## Description
+// ## Description
 
-${answer.description}
+// ${answer.description}
 
-## Table of Contents
-* Installation
-* Usage
-* Lisence
-* Questions
+// ## Table of Contents
+// * Installation
+// * Usage
+// * Lisence
+// * Questions
 
-#### Installation
+// #### Installation
 
-${answer.Installation}
+// ${answer.Installation}
 
-## Usage
+// ## Usage
 
-${answer.usage}
+// ${answer.usage}
 
-## Lisence
+// ## Lisence
 
-${answer.Lisence}
+// ${answer.Lisence}
 
-## Questions
+// ## Questions
 
-${answer.questions}`;
-}
+// ${answer.questions}`;
+// }
 
 
+
+// // TODO: Create a function to initialize app
+// const init = () => {
+//     questions()
+//     .then((answer) => writeFileAsync('README.md', writeToFile(answer)))
+//     .then(()=> console.log('Your README has been created!'))
+//     .catch((err) => console.error(err)); 
+// };
+
+// // Function call to initialize app
+// init();

@@ -9,6 +9,16 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "inquirer": "^6.3.1"
-  }
+    "inquirer": "^6.5.2"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Stephan311/Steph-s-README.md-Generator.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/Stephan311/Steph-s-README.md-Generator/issues"
+  },
+  "homepage": "https://github.com/Stephan311/Steph-s-README.md-Generator#readme"
 }

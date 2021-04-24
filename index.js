@@ -46,7 +46,7 @@ const questions = () => {
 ])
 .then((answers) => {
     const filename =  `${answers.name.toLowerCase().split(' ').join('')}.md`;
-    fs.writeFile(filename, JSON.stringify(generateMarkdown(answers), null, '/t'), (err) =>
+    fs.writeFile(filename, generateMarkdown(answers), (err) =>
     err? console.log(err) : console.log("README has been created! Check it out!"))
 
 })

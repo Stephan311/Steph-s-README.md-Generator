@@ -43,6 +43,18 @@ const questions = () => {
         message: 'How can users reach out to you for questions they may have?',
         validate: (answer)=>{ if(answer){return true} else {return 'Please enter an answer before proceeding'}}
     },
+    {
+        type: 'input',
+        name: 'github',
+        message: 'What is your Github username?',
+        validate: (answer)=>{ if(answer){return true} else {return 'Please enter an answer before proceeding'}}
+    },
+    {
+        type: 'input',
+        name: 'projectlink',
+        message: 'What is the link to your deployed project?',
+        validate: (answer)=>{ if(answer){return true} else {return 'Please enter an answer before proceeding'}}
+    },
 ])
 .then((answers) => {
     const filename =  `${answers.name.toLowerCase().split(' ').join('')}.md`;

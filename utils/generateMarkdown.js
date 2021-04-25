@@ -54,6 +54,14 @@ ${answer.Lisence}
 
 ${answer.questions}
 
+## Github Username
+
+${answer.github}
+
+## Repo Link: 
+
+${answer.projectlink}
+
 `
 }
 

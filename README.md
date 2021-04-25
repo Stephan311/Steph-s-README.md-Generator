@@ -4,6 +4,4 @@ This README generator makes creating high quality, professional README's for any
 
 Link to Repo:
 
-Link to Deployed App:
-
-Video of README being mafe
+Video of README being made: https://drive.google.com/file/d/1SI9iCl_k3GTB1FGMgx0bay9BW1cHJW7m/view?usp=sharing

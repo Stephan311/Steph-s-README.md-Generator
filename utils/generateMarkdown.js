@@ -46,6 +46,14 @@ ${answer.Installation}
 
 ${answer.usage}
 
+## Contribution
+
+${answer.contribution}
+
+## Credits
+
+${answer.credits}
+
 ## Lisence
 
 ${answer.Lisence}

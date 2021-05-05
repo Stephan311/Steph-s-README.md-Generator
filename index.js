@@ -1,7 +1,6 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-const util = require('util');
 const generateMarkdown = require('./utils/generateMarkdown.js');
 
 // TODO: Create an array of questions for user input
@@ -29,6 +28,18 @@ const questions = () => {
         type: 'input',
         name: 'usage',
         message: 'What is the usage information?',
+        validate: (answer)=>{ if(answer){return true} else {return 'Please enter an answer before proceeding'}}
+    },
+    {
+        type: 'input',
+        name: 'credits',
+        message: 'What are the credits?',
+        validate: (answer)=>{ if(answer){return true} else {return 'Please enter an answer before proceeding'}}
+    },
+    {
+        type: 'input',
+        name: 'contribution',
+        message: 'What contribution was there?',
         validate: (answer)=>{ if(answer){return true} else {return 'Please enter an answer before proceeding'}}
     },
     {
